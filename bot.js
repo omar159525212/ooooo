@@ -11,9 +11,9 @@ client.on('message', message => {
     let copy = "King | Bot";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-    msg.react('?')
-    .then(() => msg.react(':white_check_mark: '))
-    .then(() =>msg.react(':negative_squared_cross_mark: '))
+    msg.react('✅')
+    .then(() => msg.react('❌'))
+    .then(() =>msg.react('✅'))
 
     let reaction1Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
     let reaction2Filter = (reaction, user) => reaction.emoji.name === '?' && user.id === message.author.id;
